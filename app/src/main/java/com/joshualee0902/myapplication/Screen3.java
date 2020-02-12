@@ -14,11 +14,12 @@ public class Screen3 extends AppCompatActivity {
 
     Button next2;
     Button back1;
-    boolean checkCrossedLine;
+    CheckBox checkCrossedLine;
+    public static String didCrossLine;
     ElegantNumberButton upperScore;
     ElegantNumberButton lowerScore;
-    String autoUpper;
-    String autoLower;
+    public static String autoUpper;
+    public static String autoLower;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,8 +30,8 @@ public class Screen3 extends AppCompatActivity {
         next2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                passData();
                 openScreen4();
-                finish();
             }
         });
 
@@ -39,16 +40,22 @@ public class Screen3 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 openScreen2();
-                finish();
             }
         });
 
-        checkCrossedLine = ((CheckBox) findViewById(R.id.checkCrossedLine)).isChecked();
+    }
 
+
+    public void passData() {
+        checkCrossedLine = findViewById(R.id.checkCrossedLine);
         upperScore = findViewById(R.id.AutoUpper);
-        autoUpper = upperScore.getNumber();
-
         lowerScore = findViewById(R.id.AutoLower);
+        if(checkCrossedLine.isChecked()) {
+            didCrossLine = "Crossed";
+        } else {
+            didCrossLine = "Did not Cross";
+        }
+        autoUpper = upperScore.getNumber();
         autoLower = lowerScore.getNumber();
     }
 

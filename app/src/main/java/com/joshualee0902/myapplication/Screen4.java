@@ -16,13 +16,16 @@ public class Screen4 extends AppCompatActivity {
     Button back2;
     ElegantNumberButton upperScore;
     ElegantNumberButton lowerScore;
-    boolean checkWheelSpin;
-    boolean checkWheelColor;
-    boolean checkClimbed;
+    CheckBox checkWheelSpin;
+    CheckBox checkWheelColor;
+    CheckBox checkClimbed;
     ElegantNumberButton foul;
-    String teleUpper;
-    String teleLower;
-    String fouls;
+    public static String wheelSpinned;
+    public static String wheelColored;
+    public static String climbed;
+    public static String teleUpper;
+    public static String teleLower;
+    public static String fouls;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,8 +36,8 @@ public class Screen4 extends AppCompatActivity {
         next3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                passData();
                 openScreen5();
-                finish();
             }
         });
 
@@ -43,21 +46,35 @@ public class Screen4 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 openScreen3();
-                finish();
             }
         });
 
+    }
+
+    public void passData() {
         upperScore = findViewById(R.id.TeleUpper);
-        teleUpper = upperScore.getNumber();
-
         lowerScore = findViewById(R.id.TeleLower);
-        teleLower = lowerScore.getNumber();
-
-        checkWheelSpin = ((CheckBox) findViewById(R.id.checkWheelSpin)).isChecked();
-        checkWheelColor = ((CheckBox) findViewById(R.id.checkWheelColor)).isChecked();
-        checkClimbed = ((CheckBox) findViewById(R.id.checkClimb)).isChecked();
-
+        checkWheelSpin = findViewById(R.id.checkWheelSpin);
+        checkWheelColor = findViewById(R.id.checkWheelColor);
+        checkClimbed = findViewById(R.id.checkClimb);
         foul = findViewById(R.id.Fouls);
+        teleUpper = upperScore.getNumber();
+        teleLower = lowerScore.getNumber();
+        if(checkWheelSpin.isChecked()) {
+            wheelSpinned = "Spinned Wheel";
+        } else {
+            wheelSpinned = "Did not Spin Wheel";
+        }
+        if(checkWheelColor.isChecked()) {
+            wheelColored = "Wheeled Color";
+        } else {
+            wheelColored = "Did not Wheel Color";
+        }
+        if(checkClimbed.isChecked()) {
+            climbed = "Climbed";
+        } else {
+            climbed = "Did not Climb";
+        }
         fouls = foul.getNumber();
     }
 

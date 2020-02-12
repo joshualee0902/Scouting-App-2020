@@ -3,15 +3,24 @@ package com.joshualee0902.myapplication;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
+import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import com.cepheuen.elegantnumberbutton.view.ElegantNumberButton;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 public class Screen5 extends AppCompatActivity {
 
@@ -19,28 +28,24 @@ public class Screen5 extends AppCompatActivity {
     Button next4;
     EditText totalPoints;
     ElegantNumberButton rankingPoint;
-    boolean checkBricked;
-    String defense;
+    CheckBox checkBricked;
     EditText comment;
-    String rankingPoints;
-    //private static final String FILE_NAME = "data.txt";
+    public static String totPoints;
+    public static String rankingPoints;
+    public static String bricked;
+    public static String say;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_screen5);
 
-        Spinner defenseSpinner = findViewById(R.id.defense_spinner);
-        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.defenseOption, android.R.layout.simple_dropdown_item_1line);
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        defenseSpinner.setAdapter((adapter));
-
         next4 = findViewById(R.id.next4);
         next4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                passData();
                 openScreen6();
-                finish();
             }
         });
 
@@ -49,22 +54,24 @@ public class Screen5 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 openScreen4();
-                finish();
             }
         });
 
+    }
+
+    public void passData() {
         totalPoints = findViewById(R.id.totalPoints);
-
         rankingPoint = findViewById(R.id.RankingPoints);
-        rankingPoints = rankingPoint.getNumber();
-
-        checkBricked = ((CheckBox) findViewById(R.id.checkBricked)).isChecked();
-
-        defense = defenseSpinner.getSelectedItem().toString();
-
+        checkBricked = findViewById(R.id.checkBricked);
         comment = findViewById(R.id.Comment);
-
-
+        totPoints = totalPoints.getText().toString();
+        rankingPoints = rankingPoint.getNumber();
+        if(checkBricked.isChecked()) {
+            bricked = "Bricked";
+        } else {
+            bricked = "Did not Brick";
+        }
+        say = comment.getText().toString();
     }
 
     public void openScreen6() {
