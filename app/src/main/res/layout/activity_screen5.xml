@@ -49,14 +49,14 @@
         android:layout_marginLeft="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
-        android:layout_marginBottom="160dp"
+        android:layout_marginBottom="72dp"
         android:ems="10"
         android:hint="@string/add_comment"
         android:inputType="textPersonName"
         android:textSize="20dp"
         app:layout_constraintBottom_toTopOf="@+id/back3"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.031"
         app:layout_constraintStart_toStartOf="parent" />
 
     <CheckBox
@@ -67,12 +67,12 @@
         android:layout_marginLeft="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
-        android:layout_marginBottom="32dp"
+        android:layout_marginBottom="24dp"
         android:text="@string/bricked"
         android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/Comment"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.028"
+        app:layout_constraintHorizontal_bias="0.017"
         app:layout_constraintStart_toStartOf="parent" />
 
     <com.cepheuen.elegantnumberbutton.view.ElegantNumberButton
@@ -83,7 +83,7 @@
         android:layout_marginLeft="27dp"
         android:layout_marginEnd="301dp"
         android:layout_marginRight="301dp"
-        android:layout_marginBottom="32dp"
+        android:layout_marginBottom="44dp"
         app:backGroundColor="@color/blue"
         app:layout_constraintBottom_toTopOf="@+id/checkBricked"
         app:layout_constraintEnd_toEndOf="parent"
@@ -94,16 +94,12 @@
         android:id="@+id/rankingPoints"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginBottom="32dp"
+        android:layout_marginBottom="12dp"
         android:text="@string/ranking_points"
         android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/RankingPoints"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.057"
         app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
@@ -114,13 +110,13 @@
         android:layout_marginLeft="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
-        android:layout_marginBottom="44dp"
+        android:layout_marginBottom="36dp"
         android:ems="10"
         android:hint="@string/total_points"
         android:inputType="textPersonName"
         app:layout_constraintBottom_toTopOf="@+id/rankingPoints"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.027"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button

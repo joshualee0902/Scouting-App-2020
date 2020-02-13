@@ -61,14 +61,14 @@ public class Screen4 extends AppCompatActivity {
         teleUpper = upperScore.getNumber();
         teleLower = lowerScore.getNumber();
         if(checkWheelSpin.isChecked()) {
-            wheelSpinned = "Spinned Wheel";
+            wheelSpinned = "Stage 2 Complete";
         } else {
-            wheelSpinned = "Did not Spin Wheel";
+            wheelSpinned = "No Stage 2";
         }
         if(checkWheelColor.isChecked()) {
-            wheelColored = "Wheeled Color";
+            wheelColored = "Stage 3 Complete";
         } else {
-            wheelColored = "Did not Wheel Color";
+            wheelColored = "No Stage 3";
         }
         if(checkClimbed.isChecked()) {
             climbed = "Climbed";
