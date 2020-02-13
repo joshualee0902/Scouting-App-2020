@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:text="@string/match_auto"
@@ -38,10 +38,10 @@
         android:textSize="25sp"
         app:layout_constraintBottom_toTopOf="@+id/UpperScore"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.139"
+        app:layout_constraintHorizontal_bias="0.151"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/PostMatch"
-        app:layout_constraintVertical_bias="0.572" />
+        app:layout_constraintVertical_bias="0.295" />
 
     <TextView
         android:id="@+id/UpperScore"
@@ -67,7 +67,7 @@
         android:layout_marginLeft="41dp"
         android:layout_marginEnd="263dp"
         android:layout_marginRight="263dp"
-        android:layout_marginBottom="296dp"
+        android:layout_marginBottom="228dp"
         app:backGroundColor="@color/blue"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -101,7 +101,7 @@
         android:layout_marginLeft="41dp"
         android:layout_marginEnd="263dp"
         android:layout_marginRight="263dp"
-        android:layout_marginBottom="132dp"
+        android:layout_marginBottom="64dp"
         app:backGroundColor="@color/blue"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
