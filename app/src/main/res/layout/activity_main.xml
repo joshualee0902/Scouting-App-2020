@@ -26,15 +26,15 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.949" />
+        app:layout_constraintVertical_bias="0.057" />
 
     <ImageView
         android:id="@+id/gladiator"
-        android:layout_width="176dp"
-        android:layout_height="216dp"
+        android:layout_width="275dp"
+        android:layout_height="309dp"
         android:layout_below="@id/scoutingApp"
         android:layout_centerInParent="true"
-        android:layout_marginBottom="16dp"
+        android:layout_marginBottom="28dp"
         app:layout_constraintBottom_toTopOf="@+id/infiniteRecharge"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -42,12 +42,12 @@
 
     <ImageView
         android:id="@+id/infiniteRecharge"
-        android:layout_width="162dp"
-        android:layout_height="80dp"
+        android:layout_width="252dp"
+        android:layout_height="170dp"
         android:layout_below="@id/gladiator"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
-        android:layout_marginBottom="24dp"
+        android:layout_marginBottom="92dp"
         app:layout_constraintBottom_toTopOf="@+id/start"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
