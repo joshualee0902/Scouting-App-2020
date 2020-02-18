@@ -27,10 +27,12 @@ public class Screen5 extends AppCompatActivity {
     Button back3;
     Button next4;
     EditText totalPoints;
+    EditText outcome;
     ElegantNumberButton rankingPoint;
     CheckBox checkBricked;
     EditText comment;
     public static String totPoints;
+    public static String windrawlose;
     public static String rankingPoints;
     public static String bricked;
     public static String say;
@@ -62,15 +64,17 @@ public class Screen5 extends AppCompatActivity {
 
     public void passData() {
         totalPoints = findViewById(R.id.totalPoints);
+        outcome = findViewById(R.id.outcome);
         rankingPoint = findViewById(R.id.RankingPoints);
         checkBricked = findViewById(R.id.checkBricked);
         comment = findViewById(R.id.Comment);
         totPoints = totalPoints.getText().toString();
+        windrawlose = outcome.getText().toString();
         rankingPoints = rankingPoint.getNumber();
         if(checkBricked.isChecked()) {
-            bricked = "Bricked";
+            bricked = "Y";
         } else {
-            bricked = "Did not Brick";
+            bricked = "N";
         }
         say = comment.getText().toString();
     }

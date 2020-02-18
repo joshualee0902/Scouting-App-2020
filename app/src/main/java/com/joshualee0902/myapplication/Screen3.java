@@ -52,9 +52,9 @@ public class Screen3 extends AppCompatActivity {
         upperScore = findViewById(R.id.AutoUpper);
         lowerScore = findViewById(R.id.AutoLower);
         if(checkCrossedLine.isChecked()) {
-            didCrossLine = "Crossed";
+            didCrossLine = "Y";
         } else {
-            didCrossLine = "Did not Cross";
+            didCrossLine = "N";
         }
         autoUpper = upperScore.getNumber();
         autoLower = lowerScore.getNumber();

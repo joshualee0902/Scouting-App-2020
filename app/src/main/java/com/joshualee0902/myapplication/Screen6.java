@@ -48,7 +48,7 @@ public class Screen6 extends AppCompatActivity {
     }
 
     public void submitData() {
-        boolean isInserted = myDb.insertData(Screen2.teamNumber, Screen2.matchNumber, Screen3.didCrossLine, Screen3.autoUpper, Screen3.autoLower, Screen4.teleUpper, Screen4.teleLower, Screen4.wheelSpinned, Screen4.wheelColored, Screen4.climbed, Screen4.fouls, Screen5.totPoints, Screen5.rankingPoints, Screen5.bricked, Screen5.say);
+        boolean isInserted = myDb.insertData(Screen2.teamNumber, Screen2.matchNumber, Screen5.windrawlose, Screen3.didCrossLine, Screen3.autoUpper, Screen3.autoLower, Screen4.teleUpper, Screen4.teleLower, Screen4.wheelSpinned, Screen4.wheelColored, Screen4.climbed, Screen4.fouls, Screen5.totPoints, Screen5.rankingPoints, Screen5.bricked, Screen5.say);
         if(isInserted) {
             //if the data is successfully submitted, "Data Inserted" Toast will appear
             Toast.makeText(Screen6.this, "Data Inserted", Toast.LENGTH_LONG).show();
@@ -65,10 +65,10 @@ public class Screen6 extends AppCompatActivity {
 
         buffer = new StringBuffer();
         while (res.moveToNext()) {
-            buffer.append(res.getString(0) + " | " + res.getString(1) + " | " + res.getString(2) + " | " + res.getString(3) +
-                    " | " + res.getString(4) + " | " + res.getString(5) + " | " + res.getString(6) + " | " + res.getString(7) +
-                    " | " + res.getString(8) + " | " + res.getString(9) + " | " + res.getString(10) + " | " + res.getString(11) + " | " +
-                    res.getString(12) + " | " + res.getString(13) + " | " + res.getString(14) + "\n\n");
+            buffer.append(res.getString(0) + " | " + res.getString(1) + " | " + res.getString(2) + " | " + res.getString(3) + " | " + res.getString(4) +
+                    " | " + res.getString(5) + " | " + res.getString(6) + " | " + res.getString(7) + " | " + res.getString(8) +
+                    " | " + res.getString(9) + " | " + res.getString(10) + " | " + res.getString(11) + " | " + res.getString(12) + " | " +
+                    res.getString(13) + " | " + res.getString(14) + " | " + res.getString(15) + "\n\n");
         }
 
         String resText = buffer.toString();

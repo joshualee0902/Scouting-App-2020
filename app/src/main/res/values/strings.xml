@@ -12,6 +12,7 @@
     <string name="match_auto">Match - Autonomous</string>
     <string name="post_match">Post-Match</string>
     <string name="home">Home</string>
+    <string name="outcome">W/D/L</string>
     <color name="red">#E34B4B</color>
     <color name="gold">#F1D761</color>
     <color name="black">#000000</color>
