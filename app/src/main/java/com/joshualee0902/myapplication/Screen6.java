@@ -22,6 +22,7 @@ public class Screen6 extends AppCompatActivity {
     TextView final_product;
     public Database myDb = new Database(this);
     StringBuffer buffer;
+    Button home;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,6 +34,14 @@ public class Screen6 extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 submitData();
+            }
+        });
+
+        home = findViewById(R.id.home);
+        home.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openHome();
             }
         });
 
@@ -65,6 +74,11 @@ public class Screen6 extends AppCompatActivity {
         String resText = buffer.toString();
         final_product = findViewById(R.id.final_product);
         final_product.setText(resText);
+    }
+
+    public void openHome() {
+        Intent intent9 = new Intent(this, MainActivity.class);
+        startActivity(intent9);
     }
 
 }

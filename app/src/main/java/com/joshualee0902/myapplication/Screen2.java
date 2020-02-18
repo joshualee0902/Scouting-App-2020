@@ -28,6 +28,7 @@ public class Screen2 extends AppCompatActivity {
             public void onClick(View v) {
                 passData();
                 openScreen3();
+                finish();
             }
         });
 
