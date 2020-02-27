@@ -20,8 +20,7 @@ public class Screen4 extends AppCompatActivity {
     CheckBox checkWheelColor;
     CheckBox checkClimbed;
     ElegantNumberButton foul;
-    public static String wheelSpinned;
-    public static String wheelColored;
+    public static String wheel;
     public static String climbed;
     public static String teleUpper;
     public static String teleLower;
@@ -61,15 +60,12 @@ public class Screen4 extends AppCompatActivity {
         foul = findViewById(R.id.Fouls);
         teleUpper = upperScore.getNumber();
         teleLower = lowerScore.getNumber();
-        if(checkWheelSpin.isChecked()) {
-            wheelSpinned = "Y";
-        } else {
-            wheelSpinned = "N";
-        }
-        if(checkWheelColor.isChecked()) {
-            wheelColored = "Y";
-        } else {
-            wheelColored = "N";
+        if(checkWheelSpin.isChecked() && checkWheelColor.isChecked()) {
+            wheel = "3";
+        } else if(checkWheelSpin.isChecked() && checkWheelColor.isChecked() == false) {
+            wheel = "2";
+        } else if(checkWheelSpin.isChecked() == false && checkWheelColor.isChecked() == false) {
+            wheel = "1";
         }
         if(checkClimbed.isChecked()) {
             climbed = "Climbed";

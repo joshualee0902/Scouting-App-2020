@@ -39,13 +39,13 @@
 
             <TextView
                 android:id="@+id/final_product"
-                android:layout_width="366dp"
+                android:layout_width="342dp"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="16dp"
                 android:layout_marginTop="16dp"
                 android:layout_marginBottom="40dp"
-                android:textIsSelectable="true"
                 android:text="@string/data"
+                android:textIsSelectable="true"
                 android:textSize="24dp"
                 app:layout_constraintBottom_toTopOf="@+id/next4"
                 app:layout_constraintEnd_toEndOf="parent"

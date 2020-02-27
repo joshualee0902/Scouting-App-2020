@@ -72,9 +72,9 @@ public class Screen5 extends AppCompatActivity {
         windrawlose = outcome.getText().toString();
         rankingPoints = rankingPoint.getNumber();
         if(checkBricked.isChecked()) {
-            bricked = "Y";
+            bricked = "1";
         } else {
-            bricked = "N";
+            bricked = "0";
         }
         say = comment.getText().toString();
     }
