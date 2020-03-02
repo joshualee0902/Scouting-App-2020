@@ -12,6 +12,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 import android.content.Context;
 
+import java.io.FileInputStream;
 import java.io.StringBufferInputStream;
 
 
@@ -20,6 +21,7 @@ public class Screen6 extends AppCompatActivity {
 
     Button submit;
     TextView final_product;
+    TextView format;
     public Database myDb = new Database(this);
     StringBuffer buffer;
     Button home;
@@ -28,6 +30,8 @@ public class Screen6 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_screen6);
+
+        format = findViewById(R.id.format);
 
         submit = findViewById(R.id.next4);
         submit.setOnClickListener(new View.OnClickListener() {
@@ -74,6 +78,23 @@ public class Screen6 extends AppCompatActivity {
         String resText = buffer.toString();
         final_product = findViewById(R.id.final_product);
         final_product.setText(resText);
+        final_product.setFocusable(true);
+        final_product.setEnabled(true);
+        final_product.setClickable(true);
+        final_product.setFocusableInTouchMode(true);
+
+        /*
+        FileInputStream fis;
+        fis = openFileInput("test.txt");
+        StringBuffer fileContent = new StringBuffer("");
+
+        byte[] buffer = new byte[1024];
+
+        while ((n = fis.read(buffer)) != -1)
+        {
+            fileContent.append(new String(buffer, 0, n));
+        }
+         */
     }
 
     public void openHome() {
