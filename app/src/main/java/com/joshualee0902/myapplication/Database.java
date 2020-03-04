@@ -44,6 +44,7 @@ public class Database extends SQLiteOpenHelper {
         onCreate(db);
     }
 
+
     public boolean insertData(String teamNum, String matchNum, String outcome, String crossLine, String autoUpper, String autoLower, String teleUpper, String teleLower, String wheel, String climb, String fouls, String totalPoints, String rankingPoints, String bricked, String comment) {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();

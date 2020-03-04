@@ -106,9 +106,9 @@ public class Screen6 extends AppCompatActivity {
                  if (Build.VERSION.SDK_INT >= 23) {
                      if (checkPermission()) {
                          File sdcard = Environment.getExternalStorageDirectory();
-                         File dir = new File(sdcard.getAbsolutePath() + "/text/");
+                         File dir = new File(sdcard.getAbsolutePath() + "/text files/");
                          dir.mkdir();
-                         File file = new File(dir, "sample.txt");
+                         File file = new File(dir, "data.txt");
                          FileOutputStream os = null;
                          try {
                              os = new FileOutputStream(file);
@@ -118,18 +118,18 @@ public class Screen6 extends AppCompatActivity {
                              e.printStackTrace();
                          }
                      } else {
-                         requestPermission(); // Code for permission
+                         requestPermission();
                      }
                  } else {
 
                      File sdcard = Environment.getExternalStorageDirectory();
-                     File dir = new File(sdcard.getAbsolutePath() + "/text/");
+                     File dir = new File(sdcard.getAbsolutePath() + "/text files/");
                      dir.mkdir();
-                     File file = new File(dir, "sample.txt");
+                     File file = new File(dir, "data.txt");
                      FileOutputStream os = null;
                      try {
                          os = new FileOutputStream(file);
-                         os.write(resTextw.getBytes());
+                         os.write(resText.getBytes());
                          os.close();
                      } catch (IOException e) {
                          e.printStackTrace();
