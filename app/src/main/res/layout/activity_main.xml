@@ -24,10 +24,9 @@
         android:textSize="40sp"
         app:layout_constraintBottom_toTopOf="@+id/gladiator"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.433"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.765" />
+        app:layout_constraintVertical_bias="0.0" />
 
     <ImageView
         android:id="@+id/gladiator"
@@ -35,7 +34,7 @@
         android:layout_height="313dp"
         android:layout_below="@id/scoutingApp"
         android:layout_centerInParent="true"
-        android:layout_marginBottom="64dp"
+        android:layout_marginBottom="68dp"
         app:layout_constraintBottom_toTopOf="@+id/infiniteRecharge"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -48,7 +47,7 @@
         android:layout_below="@id/gladiator"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
-        android:layout_marginBottom="100dp"
+        android:layout_marginBottom="80dp"
         app:layout_constraintBottom_toTopOf="@+id/start"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
